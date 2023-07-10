@@ -78,6 +78,14 @@ nav > a {
   }
 }
 
+hgroup > * {
+  margin-block-end: 0;
+}
+
+hgroup > *:last-child {
+  color:  hsl(205, 10%, 50%);;
+}
+
 /* Composition */
 
 .flow > * + * {
