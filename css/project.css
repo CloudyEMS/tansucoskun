@@ -1,0 +1,52 @@
+.project {
+  display: grid;
+  grid-template:
+    "description"
+    "visuals";
+  gap: 3rem;
+}
+
+.project p {
+  text-align: justify;
+}
+
+.project__description {
+  grid-area: description;
+  padding: var(--padding);
+}
+
+.project__visuals {
+  grid-area: visuals;
+}
+
+.project__visuals img {
+  object-fit: contain;
+}
+
+.visual {
+  display: grid;
+  gap: var(--space);
+}
+
+.description {
+  padding: var(--padding);
+}
+
+@media (min-width: 576px) {
+  .project {
+    grid-template:
+      "description visuals"
+      / 1fr 3fr;
+  }
+
+  .project__description {
+    position: sticky;
+    top: var(--space);
+    align-self: flex-start;
+  }
+
+
+  .visual {
+    grid-template-columns: 2fr 1fr;
+  }
+}
